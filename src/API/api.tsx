@@ -6,9 +6,7 @@ const api = axios.create({
 
 
 // Fetch posts with pagination
-export const fetchPosts =  () => {
-  return api.get("/posts");
-  
+export const fetchPosts = async  () => {
+   const res = await api.get("/posts");
+   return res.status === 200 ? res.data : [];
 };
-
-

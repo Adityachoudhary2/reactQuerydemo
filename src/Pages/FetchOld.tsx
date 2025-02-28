@@ -34,8 +34,8 @@ const FetchOld: React.FC = () => {
 
 
   return (
-    <ul className="section-accordin">
-      {posts.map(({ id, title, body }) => (
+    <ul className="section-accordion">
+      {posts ?.map(({ id, title, body }) => (
         <li key={id}>
           <p>{title}</p>
           <p>{body}</p>
