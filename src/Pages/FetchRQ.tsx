@@ -10,10 +10,13 @@ interface Item {
 
 const FetchRQ: React.FC = () => {
  
-  const { data } = useQuery({
+  const { data, isLoading, isError, error} = useQuery({
     queryKey: ["posts"],
     queryFn: fetchPosts,
   });
+
+  if (isLoading) return <p>Loading...</p>;
+  if (isError) return <p> Error:{ ( error as Error).message ||  "Something went wrong"}</p>;
 
   return (
     <ul className="section-accordion">
