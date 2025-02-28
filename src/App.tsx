@@ -24,7 +24,8 @@ const router = createBrowserRouter([
         element: <FetchRQ />,
       },
     ],
-  },
+  }, 
+  
 ]);
 
 const App: React.FC = () => {
